@@ -32,11 +32,13 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
+        
+        
         $request->validate([
             'conteudo_post' => 'required|string|max:255',
             'imagem_post' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
+        dd('merda');
         $post = new Post;
         $post->users_id = auth()->user()->id;
         $post->conteudo_post = $request->input('conteudo_post');

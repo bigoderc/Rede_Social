@@ -25,7 +25,6 @@
     <div class="container">
         <h2>Timeline do Usuário</h2>
         @foreach($posts as $post)
-        dd($post);
         <div class="card mb-3">
             <div class="card-body">
                 @if($post->user)
